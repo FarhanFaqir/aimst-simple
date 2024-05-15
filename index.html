@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AIMST - Landing Page</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+    <!-- Favicon -->
+    <link href="./assets/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="./assets/frontend/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="./assets/frontend/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./assets/frontend/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="./assets/frontend/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="./assets/frontend/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div> -->
+        <!-- Spinner End -->
+
+        <!-- Header Start -->
+        <div class="navbar-light fixed-top" style="background-color: #fff; box-shadow: 0 8px 6px -6px grey;" id="">
+            <div class="container px-0">
+                <div class="row gx-0">
+                    <div class="col-lg-3  d-none d-lg-block">
+                        <a href="index.html" class="navbar-brand d-block ">
+                            <img class="p-2 mt-1" height="75px" src="./assets/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-9">
+                        <nav class="text-center navbar navbar-expand-lg shadow-5-strong p-3 p-lg-0">
+                            <a href="/" class="navbar-brand d-block d-lg-none ">
+                                <img height="55px" src="./assets/logo.png" alt="">
+                            </a>
+                            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                                <div class="navbar-nav mr-auto py-0 mt-3">
+                                    <a href="index.html" class="nav-item nav-link active mt-2">Home</a>
+                                    <a href="#about" class="nav-item nav-link mt-2">About Us</a>
+                                    <a href="#courses" class="nav-item nav-link mt-2">Courses</a>
+                                    <a href="#campus" class="nav-item nav-link mt-2">Campus</a>
+                                    <a href="#" class="nav-item nav-link mt-2">News </a>
+                                    <a href="contact.html" class="nav-item nav-link mt-2">Contact Us</a>
+                                    <!-- <a href="{{ route('login" class="nav-item nav-link"><button class="btn" style="font-size:15px; padding-left: 15px; padding-right: 15px; background-color: #9A0D07; color: #fff;">Login</button></a>
+                                <a href="{{ route('register" class="nav-item nav-link"><button class="btn reg-btn" style="font-size:15px; padding-left: 15px; padding-right: 15px; border-color: #9A0D07; color: #fff;">Register</button></a> -->
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0 mt-1" style="margin-top: -75px;" id="carousel">
+            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img style="height: 90vh; width:100%; margin: 0 auto; filter: brightness(100%);" class="img-responsive img-center carousel-image" src="./assets/frontend/img/main.jpeg" alt="Image">
+
+                    </div>
+                    <!-- <div class="carousel-item">
+                        <img style="height: 102vh; width:100%; filter: brightness(100%);" class=" img-fluid carousel-image" src="{{ asset('frontend/img/carousel-1.png" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                <h3 class="display-5 text-white mb-2 animated slideInDown carousel-heading">Minerals and Mining</h3>
+                                <p class="display-10 text-white animated slideInDown m-auto carousel-text">Gilgit Baltistan is crowned with rich variety of minerals and gemstones, 
+                                    making mining the backbone to the region’s economy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img style="height: 102vh; width:100%; filter: brightness(60%);" class=" img-fluid carousel-image" src="{{ asset('frontend/img/carousel-3.png" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                <h3 class="display-5 text-white mb-2 animated slideInDown carousel-heading">Minerals and Mining</h3>
+                                <p class="display-10 text-white animated slideInDown m-auto carousel-text">Gilgit Baltistan is crowned with rich variety of minerals and gemstones, 
+                                    making mining the backbone to the region’s economy.
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- About Start -->
+        <div id="about" class="container-xxl about mb-5 wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center wow fadeInUp pt-5" data-wow-delay="0.1s">
+                    <h2 class="" style="color: #005F33;">About Us</h2>
+                    <hr class="mt-0 m-auto" style="width: 100px; color: #005F33 !important; height: 3px;">
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <img height="450px" width="90%" src="./assets/frontend/img/about.jpg" alt="">
+                        </div>
+                        <div class="about-discription col-md-6 mr-3">
+                            <h2 class="text-start mt-2" style="color: #005F33;">First Choice For The Medical Education</h2>
+                            <h2 class="text-start" style="color: #005F33;"></h2>
+                            <p class="text-dark text-start pr-5">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Sed deserunt consequuntur, cumque excepturi temporibus
+                                asperiores praesentium, autem, minus est ducimus soluta
+                                a odit enim possimus architecto recusandae? Quam, sed iure.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Sed deserunt consequuntur, cumque excepturi temporibus
+                                asperiores praesentium, autem, minus est ducimus soluta
+                                a odit enim possimus architecto recusandae? Quam, sed iure.
+                                <br>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Sed deserunt consequuntur, cumque excepturi temporibus
+                                asperiores praesentium, autem, minus est ducimus soluta
+                                a odit enim possimus architecto recusandae? Quam, sed iure.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Sed deserunt consequuntur, cumque excepturi temporibus
+                                asperiores praesentium, autem, minus est ducimus soluta
+                                a odit enim possimus architecto recusandae? Quam, sed iure.
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Why Choose Us Start -->
+        <!-- <div class="container-xxl mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center wow fadeInUp pt-5" data-wow-delay="0.1s">
+                    <h2 class="" style="color: #005F33;">Why Choose Us</h2>
+                    <hr class="mt-0 m-auto" style="width: 100px; color: #005F33 !important; height: 3px;">
+                </div>
+                <div class="owl-carousel stone-carousel position-relative">
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-1.png" style="width: 80px; height: 80px;">
+                        <div class=" text-center p-4 card-body" st>
+                            <h5 class="card-title">Sapphire</h5>
+                            <p class="card-text">
+                                Sapphire is generally known as a blue 
+                                gemstone but surprisingly it comes in a
+                                wide range of colors and quality 
+                                variations. In general, the more intense 
+                                and uniform the color is, the more 
+                                valuable the stone.
+                            </p>
+                        </div>
+                      </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-2.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Quartz</h5>
+                            <p class="card-text">
+                                Quartz is the second most abundant 
+                                mineral in Earth's crust after feldspar. 
+                                It occurs in nearly all acid igneous, 
+                                metamorphic, and sedimentary rocks.
+                                It is an essential mineral in such silica-
+                                rich felsic rocks as granites, granodiorites, 
+                                and rhyolites.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-3.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Aquamarine</h5>
+                            <p class="card-text">
+                                Aquamarine is a common gemstone. 
+                                However, there is a rarer deep blue 
+                                variant called maxixe, but its color can 
+                                fade due to sunlight. The color of 
+                                maxixe is caused by NO3.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-4.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Tourmaline</h5>
+                            <p class="card-text">
+                                Tourmaline is a gemstone that belongs to 
+                                a complex family of borosilicate mixed 
+                                with iron, magnesium or other various 
+                                metals that depending upon the 
+                                proportions of its components may 
+                                form as red, pink, yellow, brown, 
+                                black, green, blue or violet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-5.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Ruby</h5>
+                            <p class="card-text">
+                                Ruby is gem-quality red corundum. The 
+                                color comes from traces of chromium. 
+                                All other color varieties of gem-quality 
+                                corundum are referred to as sapphire. 
+                                Most gemological authorities expect a 
+                                medium to medium dark-red color tone 
+                                in a ruby.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-6.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Topaz</h5>
+                            <p class="card-text">
+                                Topaz is a silicate mineral of aluminium & 
+                                fluorine with the chemical formula Al2-
+                                SiO4(F,OH)2. It is used as a gemstone 
+                                in jewelry & other adornments. Topaz 
+                                in its natural state is colorless, though 
+                                trace element impurities can make it pale 
+                                blue or golden brown to yellow orange.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Why Choose Us End -->
+
+        <!-- Why Choose Us Start -->
+        <div id="why-choose-us" class="container-xxl py-4 mb-3 pb-4">
+            <div class="container">
+                <div class="text-center wow fadeInUp mb-4" data-wow-delay="0.1s">
+                    <h2 class="" style="color: #005F33;">Why Choose Us</h2>
+                    <hr class="mt-0 m-auto" style="width: 100px; color: #005F33 !important; height: 3px;">
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="why-choose-item rounded p-4" href="">
+                            <div class="why-choose-icon bg-transparent p-1">
+                                <!-- <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                                <i class="bi bi-people fa-3x"></i>
+                                <!-- </div> -->
+                            </div>
+                            <h5 class="mb-3 text-left" style="color: #005F33;">High Qualified Faculity </h5>
+                            <p class="text-body mb-0">
+                                Instructors who are leaders in their fields. Staff who are ready
+                                to help you every step of the way.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <a class="why-choose-item rounded p-4" href="">
+                            <div class="why-choose-icon bg-transparent p-1">
+                                <!-- <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                                <i class="bi bi-building fa-3x"></i>
+                                <!-- </div> -->
+                            </div>
+                            <h5 class="mb-3" style="color: #005F33;">Digital Libraries and Labs</h5>
+                            <p class="text-body mb-0">
+                                30+ computers, more than 2000 E-Books and 1000+ International
+                                Research Journals
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="why-choose-item rounded p-4" href="">
+                            <div class="why-choose-icon bg-transparent mt-4">
+                                <!-- <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                                <i class="bi bi-wifi fa-3x"></i>
+                                <!-- </div> -->
+                            </div>
+                            <h5 class="mb-1 d-flex" style="color: #005F33; margin-left:20px ">Centerlized Wifi</h5>
+                            <p class="text-body mb-0">
+                                Providing centerlized wifi facility to all the labs, classrooms
+                                and offices.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="why-choose-item rounded" href="">
+                            <div class="why-choose-icon bg-transparent p-1">
+                                <!-- <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                                <i class="bi bi-graph-up fa-3x"></i>
+                                <!-- </div> -->
+                            </div>
+                            <h5 class="mb-3 text-left" style="color: #005F33;">Research and Development</h5>
+                            <p class="text-body mb-0">
+                                Teachers and students are doing more research together in
+                                different domains of medicine
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Why Choose Us End -->
+
+        <!-- Courses End -->
+        <div id="courses" class="container-xxl mt-5 mb-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
+                    <h2 class="" style="color: #005F33;">Our Courses</h2>
+                    <hr class="mt-0 m-auto" style="width: 100px; color: #005F33 !important; height: 3px;">
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img style="width: 100%; height: 160px;" src="./assets/frontend/img/ott.jpg" alt="">
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0 text-center" style="color: #005F33;">Operation Threator Technology</h5>
+                                </div>
+                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <div class="d-flex justify-content-between">
+                                    <!-- <a class="btn btn-sm btn-primary rounded py-1 px-2" href="">See More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img style="width: 100%; height: 160px;" src="./assets/frontend/img/rg.jpg" alt="">
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0 text-center" style="color: #005F33;">Radiography Technology</h5>
+                                </div>
+                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <div class="d-flex justify-content-between">
+                                    <!-- <a class="btn btn-sm btn-primary rounded py-1 px-2" href="">See More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img style="width: 100%; height: 160px;" src="./assets/frontend/img/lt.jpg" alt="">
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0 text-center" style="color: #005F33;">Laboratory Technology</h5>
+                                </div>
+                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <div class="d-flex justify-content-between">
+                                    <!-- <a class="btn btn-sm btn-primary rounded py-1 px-2" href="">See More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img style="width: 100%; height: 160px;" src="./assets/frontend/img/dispensor.jpg" alt="dispensor">
+                            </div>
+                            <div class="p-4 mt-2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0 text-center m-auto" style="color: #005F33;">Medical <br> Dispensor</h5>
+                                </div>
+                                <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                                <div class="d-flex justify-content-between">
+                                    <!-- <a class="btn btn-sm btn-primary rounded py-1 px-2" href="">See More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Courses End -->
+
+        <!-- Our Campuses Start -->
+        <div id="campus" class="container-xxl wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center wow fadeInUp pt-5" data-wow-delay="0.1s">
+                    <h2 class="" style="color: #005F33;">Our Campuses</h2>
+                    <hr class="mt-0 m-auto" style="width: 100px; color: #005F33 !important; height: 3px;">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 wow fadeInUp p-5" data-wow-delay="0.1s">
+                            <div class="campus-item rounded">
+                                <div class="campus-icon bg-transparent p-1">
+                                    <!-- <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                                    <i class="bi bi-building fa-3x"></i>
+                                    <!-- </div> -->
+                                </div>
+                                <h5 class="mb-3 text-left">Skardu Campus </h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 wow fadeInUp p-5" data-wow-delay="0.1s">
+                            <div class="campus-item rounded">
+                                <div class="campus-icon bg-transparent p-1">
+                                    <!-- <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                                    <i class="bi bi-building fa-3x"></i>
+                                    <!-- </div> -->
+                                </div>
+                                <h5 class="mb-3 text-left">Gilgit Campus </h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 wow fadeInUp p-5" data-wow-delay="0.1s">
+                            <div class="campus-item rounded">
+                                <div class="campus-icon bg-transparent p-1">
+                                    <!-- <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                                    <i class="bi bi-building fa-3x"></i>
+                                    <!-- </div> -->
+                                </div>
+                                <h5 class="mb-3 text-left">Hunza Campus </h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Campuses End -->
+
+        <!-- Stones Start -->
+        <!-- <div class="container-xxl mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center wow fadeInUp pt-5" data-wow-delay="0.1s">
+                    <h2 class="" style="color: #9A0D07;">Varieties of Minerals and Precious Stones</h2>
+                    <p class="text-center mb-3 text-dark">Here are varities of some minerals and precious stones</p>
+                </div>
+                <div class="owl-carousel stone-carousel position-relative">
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-1.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Sapphire</h5>
+                            <p class="card-text">
+                                Sapphire is generally known as a blue 
+                                gemstone but surprisingly it comes in a
+                                wide range of colors and quality 
+                                variations. In general, the more intense 
+                                and uniform the color is, the more 
+                                valuable the stone.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-2.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Quartz</h5>
+                            <p class="card-text">
+                                Quartz is the second most abundant 
+                                mineral in Earth's crust after feldspar. 
+                                It occurs in nearly all acid igneous, 
+                                metamorphic, and sedimentary rocks.
+                                It is an essential mineral in such silica-
+                                rich felsic rocks as granites, granodiorites, 
+                                and rhyolites.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-3.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Aquamarine</h5>
+                            <p class="card-text">
+                                Aquamarine is a common gemstone. 
+                                However, there is a rarer deep blue 
+                                variant called maxixe, but its color can 
+                                fade due to sunlight. The color of 
+                                maxixe is caused by NO3.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-4.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Tourmaline</h5>
+                            <p class="card-text">
+                                Tourmaline is a gemstone that belongs to 
+                                a complex family of borosilicate mixed 
+                                with iron, magnesium or other various 
+                                metals that depending upon the 
+                                proportions of its components may 
+                                form as red, pink, yellow, brown, 
+                                black, green, blue or violet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-5.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Ruby</h5>
+                            <p class="card-text">
+                                Ruby is gem-quality red corundum. The 
+                                color comes from traces of chromium. 
+                                All other color varieties of gem-quality 
+                                corundum are referred to as sapphire. 
+                                Most gemological authorities expect a 
+                                medium to medium dark-red color tone 
+                                in a ruby.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top w-100 h-50" src="./assets/frontend/img/stone-6.png" style="width: 80px; height: 80px;">
+                        <div class="stone-item text-center p-4 card-body" st>
+                            <h5 class="card-title">Topaz</h5>
+                            <p class="card-text">
+                                Topaz is a silicate mineral of aluminium & 
+                                fluorine with the chemical formula Al2-
+                                SiO4(F,OH)2. It is used as a gemstone 
+                                in jewelry & other adornments. Topaz 
+                                in its natural state is colorless, though 
+                                trace element impurities can make it pale 
+                                blue or golden brown to yellow orange.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Stones End -->
+
+
+        <!-- Testimonial Start -->
+        <!-- <div class="container-xxl testimonial mb-3 bg-dark wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center wow fadeInUp pt-5" data-wow-delay="0.1s">
+                    <h2 class="" style="color: #fff;">What Our Customers Say About Us</h2>
+                    <p class="text-center mb-3 text-light">Here Are Our Happy Customers</p>
+                </div>
+                <div class="owl-carousel testimonial-carousel pt-2 pb-5">
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="./assets/frontend/img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1" style="color: #9A0D07;"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="./assets/frontend/img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1" style="color: #9A0D07;"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="./assets/frontend/img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x position-absolute end-0 bottom-0 me-4 mb-n1" style="color: #9A0D07;"></i>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Testimonial End -->
+
+        <!-- Team Start -->
+        <!-- <div class="container-xxl mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center wow fadeInUp pt-5" data-wow-delay="0.1s">
+                    <h2 class="" style="color: #9A0D07;">Our Valuable Team</h2>
+                    <p class="text-center mb-3 text-dark">Meet Our Valuable Team Members</p>
+                </div>
+                <div class="owl-carousel team-carousel position-relative">
+                    <div class="card shadow">
+                        <img class="card-img-top w-100" src="./assets/frontend/img/team-2.png" style="width: 80px; height: 350px;">
+                        <div class="text-center p-4 mt-0" style="border-top: 5px solid #9A0D07;">
+                                <h5 class="fw-bold mb-0">Hunaid Ahmed</h5>
+                                <small>CEO & Founder</small>
+                        </div>
+                    </div>
+                    <div class="card shadow">
+                        <img class="card-img-top w-100" src="./assets/frontend/img/team-3.png" style="width: 80px; height: 350px;">
+                        <div class="text-center p-4 mt-0" style="border-top: 5px solid #9A0D07;">
+                                <h5 class="fw-bold mb-0">Muhammad Ali</h5>
+                                <small>Marketing Manager</small>
+                        </div>
+                    </div>
+                    <div class="card shadow">
+                        <img class="card-img-top w-100" src="./assets/frontend/img/team-4.png" style="width: 80px; height: 350px;">
+                        <div class="text-center p-4 mt-0" style="border-top: 5px solid #9A0D07;">
+                                <h5 class="fw-bold mb-0">Shakir Ali</h5>
+                                <small>Managing Director</small>
+                        </div>
+                    </div>
+                    <div class="card shadow">
+                        <img class="card-img-top w-100" src="./assets/frontend/img/team-5.png" style="width: 80px; height: 350px;">
+                        <div class="text-center p-4 mt-0" style="border-top: 5px solid #9A0D07;">
+                                <h5 class="fw-bold mb-0">Sonia Munir</h5>
+                                <small>IT Expert</small>
+                        </div>
+                    </div>
+                    <div class="card shadow">
+                        <img class="card-img-top w-100" src="./assets/frontend/img/team-1.png" style="width: 80px; height: 350px;">
+                        <div class="text-center p-4 mt-0" style="border-top: 5px solid #9A0D07;">
+                                <h5 class="fw-bold mb-0">Inam Ullah</h5>
+                                <small>HR Manager</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Team End -->
+
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=city of knowledge school skardu&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://piratebay-proxys.com/">Pirate Proxy</a></div>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: right;
+                    width: 100%;
+                    height: 400px;
+                }
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    width: 100%;
+                    height: 400px;
+                }
+
+                .gmap_iframe {
+                    width: 100% !important;
+                    height: 400px !important;
+                }
+            </style>
+        </div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid text-light footer wow fadeIn pt-5 mt-0" data-wow-delay="0.1s">
+            <div class="container pb-5 pt-4">
+                <div class="row g-5">
+                    <div class="col-md-3 col-lg-3">
+                        <!-- <img height="100px" src="./assets/logo.png" alt=""> -->
+                        <img height="100px" style="margin-left: 40px" src="./assets/logo.png" alt="">
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h6 class="section-title text-start text-uppercase mb-4" style="color: #005F33;">Contact</h6>
+                        <p class="mb-2" style="color: #005F33"><i class="fa fa-map-marker-alt me-3"></i>Olding Abbas Town Skardu GB</p>
+                        <p class="mb-2" style="color: #005F33"><i class="fa fa-phone-alt me-3"></i>+92 3555555156 &nbsp +92 3129728000</p>
+                        <p class="mb-2 d-flex" style="color: #005F33"><i class="fa fa-envelope me-3"></i><span>alliedinstitute.technology@gmail.com</span></p>
+
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-uppercase mb-4" style="color: #005F33;">Company</h6>
+                                <a class="btn btn-link" href="">About Us</a>
+                                <a class="btn btn-link" href="">Contact Us</a>
+                                <a class="btn btn-link" href="">Campus</a>
+                                <a class="btn btn-link" href="">News and Events</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-uppercase mb-4" style="color: #005F33;">Courses</h6>
+                                <a class="btn btn-link d-flex" href="">Operation Threator Technology</a>
+                                <a class="btn btn-link d-flex" href="">Radiography Technology</a>
+                                <a class="btn btn-link d-flex" href="">Laboratory Technology</a>
+                                <a class="btn btn-link d-flex" href="">Medical Dispensor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a href="/" style="color: #005F33; text-decoration: underline;">AIMST Pvt Ltd</a><span style="color: #005F33;">, All Rights Reserved.</span>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <p style="color: #005F33; ">Developed By : <a href="https://pk.linkedin.com/in/farhanfaqir488" target="blank" style="color: #005F33; text-decoration: underline;">Farhan Faqir</a></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <!-- <a href="#" class="btn btn-lg btn-danger btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('frontend/lib/wow/wow.min.js"></script>
+    <script src="{{ asset('frontend/lib/easing/easing.min.js"></script>
+    <script src="{{ asset('frontend/lib/waypoints/waypoints.min.js"></script>
+    <script src="{{ asset('frontend/lib/counterup/counterup.min.js"></script>
+    <script src="{{ asset('frontend/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="{{ asset('frontend/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="{{ asset('frontend/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="{{ asset('frontend/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ asset('frontend/js/main.js"></script>
+
+</body>
+
+</html>
